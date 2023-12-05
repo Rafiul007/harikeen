@@ -1,0 +1,198 @@
+*{
+    font-family: Rubik,sans-serif;
+}
+
+.card-container{
+    width: 100%;
+    height: fit-content;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 18px;
+    padding-right: 18px;
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: .4s ease-in-out;
+    border-radius: 10px;
+    
+    
+}
+.card-container:hover{
+    border: 1px solid #70C332;
+    box-shadow: 0px 0px 71px -3px rgba(0,0,0,0.1);
+    transition: .4s ease-in-out;
+}
+.card-image{
+    height: 50%;
+    position: relative;
+}
+.card-body{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.card-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.image-icon p{
+    padding: 3px 10px;
+    background: #70C332;
+    color: #fff;
+    top: 0%;
+    left: 0%;
+    font-size: 14px;
+}
+
+.card-title{
+    font-weight: 400;
+    font-size: 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    overflow: hidden;
+    line-height: 18px;
+    color: #39404a;
+    padding: 5px 0px;
+}
+.card-title:hover{
+    color: #70C332;
+    transition: .4s ease-in-out;
+}
+.image-icon p{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.image-icon i{
+    color: #e8e8e8;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.price{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 12px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+.price p{
+    font-size: 16px;
+    font-weight: 700;
+}
+.discount p{
+    font-size: 14px;
+}
+.discount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+.discount .discount-parcent{
+    color: #70C332;
+    font-weight: 700;
+}
+.prev-price{
+    color: #ff3838;
+    font-weight: 500;
+    text-decoration: line-through;
+}
+.curr-price{
+    color: #70C332;
+    font-weight: 500;
+}
+.stars{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    font-weight: 400;
+    margin-top: 13px;
+    width: 100%;
+}
+.stars i{
+    color: #ffab10;
+    font-size: 12px;
+}
+.stars p{
+    font-size: 14px;
+    color: #39404a;
+}
+button{
+    background-color: #e8e8e8;
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 9px 5px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+    color: #555555;
+}
+.card-container:hover button{
+    background-color: #70C332;
+    transition: .4s ease-in-out;
+    color: #e8e8e8;
+}
+
+.popup-icon-container{
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: .4s ease-in-out;
+}
+.pop-icon{
+    width: 18%;
+    padding: 12px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background: #70C332;
+    color: #e8e8e8;
+}
+.pop-icon i{
+    font-size: large;
+}
+.card-container:hover .popup-icon-container{
+    visibility: visible;
+    transition: .4s ease-in-out;
+    bottom: 15px;
+    opacity: 1;
+}
+
+
+
+@media screen and (max-width: 899px){
+
+    
+}
+
+@media screen and (max-width: 799px){
+    
+}
+

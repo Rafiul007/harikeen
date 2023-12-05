@@ -1,0 +1,127 @@
+
+.product-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #F5F6F7;
+    
+}
+.product-card-cotainer{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    grid-gap: 27px;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+.product-container h1{
+    color: #555555;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 50px;
+}
+
+.time-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    height: 65px;
+    width: 100%;
+    
+}
+.time-sub-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: baseline;
+    position: relative;
+    background-color: #F5F6F7;
+    z-index: 2;
+    text-align: center;
+
+}
+.time-container::before{
+    width: 100%;
+    border-bottom: 2px dashed #70C332;
+    z-index: 1;
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    
+}
+
+.time{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 30px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+.time h1{
+    color: #70C332;
+}
+#a::after{
+    content: ':';
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    right: 0px;
+    color: #39404a;
+    font-size: 25px;
+}
+.time p{
+    font-weight: 500;
+    color: #555555;
+}
+
+
+@media screen and (max-width: 990px){
+    .product-card-cotainer{
+        grid-template-columns: repeat(3,1fr);
+        
+        padding: 0vw 0vw;
+    }
+    .time-container::before{
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 770px){
+    .product-card-cotainer{
+        grid-template-columns: repeat(2,1fr);
+        padding: 0 ;
+        gap: 10px;
+        
+    }
+    .time-container{
+        padding-left: 1vw;
+        padding-right: 1vw;
+    }
+    .time-container::before{
+        width: 0%;
+    }
+    
+    .product-container h1{
+        font-size: 28px;
+        text-wrap: nowrap;
+        font-weight: 500;
+    }
+    .time-sub-container{
+        width: 100%;
+    }
+    
+}
+
+
+
+
