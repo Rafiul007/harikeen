@@ -3,10 +3,30 @@
     max-width: 1900px;
     margin: auto;
     padding: 0;
-    background: rebeccapurple;
+    background: #F5F6F7;
 }
 .sub-container{
     height: auto;
     width: 80%;
     margin: auto;
+}
+@media screen and (max-width: 990px){
+    .sub-container{
+        max-width: 720px;
+        padding: 0px;
+    }
+}
+@media screen and (max-width: 765px){
+    .sub-container{
+        max-width: 540px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .sub-container{
+        width: 100%;
+        max-width: 540px;
+        padding: 5px;
+        margin: 0%;
+    }
 }

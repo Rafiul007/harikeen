@@ -87,8 +87,7 @@
 @media screen and (max-width: 990px){
     .product-card-cotainer{
         grid-template-columns: repeat(3,1fr);
-        
-        padding: 0vw 0vw;
+        gap: 25px;
     }
     .time-container::before{
         width: 100%;
@@ -96,11 +95,11 @@
     
 }
 
-@media screen and (max-width: 770px){
+@media screen and (max-width: 765px){
     .product-card-cotainer{
         grid-template-columns: repeat(2,1fr);
         padding: 0 ;
-        gap: 10px;
+        gap: 25px;
         
     }
     .time-container{
@@ -121,7 +120,11 @@
     }
     
 }
-
+@media screen and (max-width: 550px){
+    .product-container{
+        max-width: 100%;
+    }
+}
 
 
 
