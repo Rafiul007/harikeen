@@ -7,8 +7,14 @@
 }
 .sub-container{
     height: auto;
-    width: 80%;
+    width: 60%;
     margin: auto;
+}
+@media screen and (max-width:1200px) {
+    .sub-container{
+        width: 84.2%;
+    }
+    
 }
 @media screen and (max-width: 990px){
     .sub-container{
