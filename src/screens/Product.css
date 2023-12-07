@@ -133,6 +133,17 @@
     .product-container{
         max-width: 100%;
     }
+    .product-card-cotainer{
+        gap: 10px;
+    }
+}
+@media screen and (max-width:440px) {
+    .time{
+        padding: 0px 12px;
+    }
+    .card-container{
+        padding: 13px;
+    }
 }
 
 

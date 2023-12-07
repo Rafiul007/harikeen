@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Rubik,sans-serif;
+}
+.contractUs-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    width: 100%;
+    padding: 30px;
+}
+.contractUs-heading {
+    width: 720px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contractUs-heading h1{
+    margin-bottom: 20px !important;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    display: block;
+    line-height: 33px;
+    color: #000;
+}
+.contractUs-heading p{
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 1000px;
+    width: 100%;
+    margin: auto !important;
+    color: #555555;
+}
+.input-container{
+    width: 720px;
+    margin: 50px auto;
+    height: 50vh;
+}
+.input-field input, textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555555;
+    font-size: 16px;
+    margin: 5px 0px;
+    border-radius: 5px;
+}
+button{
+    width: 25%;
+    background: #09b409;
+    color: #fff;
+}
+button:hover{
+    background: lightgreen;
+    color: #000;
+}
