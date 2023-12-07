@@ -12,7 +12,7 @@
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
     grid-gap: 27px;
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 100px;
 }
 .product-container h1{
@@ -20,6 +20,7 @@
     font-weight: 700;
     font-size: 38px;
     line-height: 50px;
+
 }
 
 .time-container{
@@ -31,7 +32,7 @@
     position: relative;
     height: 65px;
     width: 100%;
-    
+    margin-top: 30px;
 }
 .time-sub-container{
     display: flex;
@@ -68,6 +69,8 @@
 }
 .time h1{
     color: #70C332;
+    font-size: 38px;
+    font-weight: 600;
 }
 #a::after{
     content: ':';
@@ -111,12 +114,18 @@
     }
     
     .product-container h1{
-        font-size: 28px;
+        font-size: 30px;
         text-wrap: nowrap;
-        font-weight: 500;
+        font-weight: 600;
     }
     .time-sub-container{
         width: 100%;
+    }
+    .time h1{
+        font-size: 25px;
+    }
+    .time p{
+        font-size: 16px;
     }
     
 }

@@ -72,7 +72,7 @@
 }
 .card-title:hover{
     color: #70C332;
-    transition: .4s ease-in-out;
+    transition: .1s ease-in-out;
 }
 .image-icon p{
     display: flex;
@@ -206,7 +206,13 @@ button{
     
 }
 
-@media screen and (max-width: 799px){
-    
+@media screen and (max-width: 550px){
+    button{
+        margin-top: 5px;
+    }
+    .discount{
+        margin-top: 5px;
+        margin-bottom: 10px;
+    }
 }
 
