@@ -40,24 +40,109 @@
     color: #555555;
 }
 .input-container{
-    width: 720px;
+    width: 100%;
+    max-width: 720px;
     margin: 50px auto;
-    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+
 }
+
+
 .input-field input, textarea{
     width: 100%;
-    padding: 10px;
-    border: 1px solid #555555;
-    font-size: 16px;
-    margin: 5px 0px;
+    font-size: 14px;
     border-radius: 5px;
+    padding: 15px 10px;
+    border: 1px solid #39404a;
 }
+.input-field input:hover, textarea:hover{
+    border: 1px solid #C92127 ;
+}
+
+
+.input-field{
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    display: relative;
+}
+
+
 button{
-    width: 25%;
+    max-width: 200px;
+    width: 100%;
     background: #09b409;
     color: #fff;
+    border-radius: 5px;
 }
 button:hover{
-    background: lightgreen;
-    color: #000;
+    background: #09b409;
+
+}
+.error-msg{
+    font-size: 12px;
+    color: red;
+    margin: 2px 5px;
+    position: absolute;
+    
+}
+/* material input area test */
+.input-field-container{
+    width: 720px;
+    margin: 8px 0px;
+}
+.input-area{
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+}
+.input-area input{
+    position: absolute;
+    width: 100%;
+    outline: none;
+    padding: 0 15px;
+    line-height: 40px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    border: 1px solid #555555;
+    background: transparent;
+    transition: 0.1s ease;
+    z-index: 1111;
+    
+}
+.labeline{
+    position: absolute;
+    font-size: .9rem;
+    color: #555555;
+    padding: 0px 5px;
+    margin: 0 20px;
+    background-color: white;
+    transition: .2s ease;
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+}
+.red{
+    visibility: hidden;
+}
+.input-area input:focus, .input-area input:valid{
+    color: #C92127;
+    border: 2px solid #C92127;
+}
+
+.input-area input:focus+.labeline, .input-area input:valid+.labeline{
+    /* color: #C92127; */
+    height: 30px;
+    line-height: 30px;
+    transform: translate(-15px, -16px) scale(0.78);
+    z-index: 1111;
+    .red{
+        color: #C92127;
+        visibility: visible;
+        transition: .1s ease;
+    }
 }
