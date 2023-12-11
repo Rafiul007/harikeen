@@ -16,12 +16,12 @@ function ContractUs() {
             comment: '',
         },
         validationSchema: Yup.object({
-            name: Yup.string().min(2, "Must be 2 character or more").max(15, "Must be 15 character or less").required("Required"),
-            email: Yup.string().email("Invalid email address").required("Required"),
-            contract: Yup.string().min(11, "Must be 11 character").max(11, "Must be 11 character").required("Required"),
-            address: Yup.string().min(2, "Must be 2 character or more").max(25, "Must be 15 character or less").required("Required"),
-            subject: Yup.string().min(6, "Must be 6 character or more").required(),
-            comment: Yup.string().max(200, "Must be 200 character or less")
+            name: Yup.string().min(2, "Must be 2 character or more").max(15, "Must be 15 character or less").required("Required *"),
+            email: Yup.string().email("Invalid email address").required("Required *"),
+            contract: Yup.string().min(11, "Must be 11 character").max(11, "Must be 11 character").required("Required *"),
+            address: Yup.string().min(2, "Must be 2 character or more").max(25, "Must be 15 character or less").required("Required *"),
+            subject: Yup.string().min(6, "Must be 6 character or more").required("Required *"),
+            comment: Yup.string().max(200, "Must be 200 character or less").required("Required *"),
         }),
         onSubmit: values => {
             console.log("on submit clicked")
@@ -59,12 +59,12 @@ function ContractUs() {
                         <div className='error-msg'>{formik.errors.contract}</div>
                     ) : null}
                 </div>
-                <div className="input-field-container">
-                <div className="input-area">
-                    <input type='text' required />
-                    <div className="labeline">Name<div className='red'>*</div> </div>
-                </div>
-            </div>
+                {/* <div className="input-field-container">
+                    <div className="input-area">
+                        <input type='text' required placeholder='Enter your name' />
+                        <div className="labeline">Name<div className='red'>*</div> </div>
+                    </div>
+                </div> */}
                 <div className="input-field">
 
                     <input type='text' placeholder='Address' name='address' id='address' {...formik.getFieldProps('address')} />
@@ -86,10 +86,16 @@ function ContractUs() {
                         <div className='error-msg'>{formik.errors.comment}</div>
                     ) : null}
                 </div>
-                <button type="submit">Submit</button>
+                <div className="contract-btn">
+                <button type="submit">Send</button>
+                </div>
             </form>
-            {/* material input try */}
-            
+
+            <div className='foot-para'>
+                <p>If you wish to contact the head office then please refer to the address below:<br/>
+                    <b>411/412, Business Tower (Level 5), Khatunganj Road, Chattogram.</b></p>
+            </div>
+
         </div>
     )
 }

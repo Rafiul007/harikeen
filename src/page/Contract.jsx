@@ -1,19 +1,18 @@
 import React from 'react'
-import './Home.css'
-import Product from '../screens/Product'
-import ContractUs from '../components/contract us/ContractUs'
+import './Contract.css'
 import Navbar from '../components/navbar/Navbar'
-function Home() {
+import ContractUs from '../components/contract us/ContractUs'
+function Contract() {
   return (
     <div className='container'>
       <div className="nav-section">
       <Navbar/>
       </div>
         <div className="sub-container">
-            <Product/>
+          <ContractUs/>
         </div>
     </div>
   )
 }
 
-export default Home
+export default Contract

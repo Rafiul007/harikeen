@@ -9,12 +9,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    
     width: 100%;
     padding: 30px;
+    background-color: #fff;
+    border-radius: 5px;
 }
 .contractUs-heading {
-    width: 720px;
+    max-width: 1180px;
+    width: 100%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -41,26 +43,16 @@
 }
 .input-container{
     width: 100%;
-    max-width: 720px;
+    max-width: 900px;
     margin: 50px auto;
     display: flex;
     flex-direction: column;
     gap:20px;
+    display: flex;
+    align-items: center;
+
 
 }
-
-
-.input-field input, textarea{
-    width: 100%;
-    font-size: 14px;
-    border-radius: 5px;
-    padding: 15px 10px;
-    border: 1px solid #39404a;
-}
-.input-field input:hover, textarea:hover{
-    border: 1px solid #C92127 ;
-}
-
 
 .input-field{
     border-radius: 5px;
@@ -70,16 +62,45 @@
     outline: none;
     display: relative;
 }
+.input-field input, textarea{
+    width: 100%;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 15px 10px;
+    border: 1px solid #39404a;
+}
+.input-field input:hover, textarea:hover{
+    outline: none;
+    border: 1px solid #C92127 ;
+}
+/* .input-field input[type=text]:focus{
+    color: #C92127;
+    border: 2px solid #C92127;
+} */
 
-
-button{
-    max-width: 200px;
+.input-field input:focus{
+    outline: none;
+    border: 2px solid #C92127;
+    /* background: yellow; */
+}
+.contract-btn{
+    width: 200px;
+    border: none;
+    outline: none;
+}
+.contract-btn button{
     width: 100%;
     background: #09b409;
     color: #fff;
     border-radius: 5px;
+    font-weight: 500;
+    font-size: 18px;
+    padding: 4px 0;
+    line-height: 38px;
+    border: none;
+    outline: none;
 }
-button:hover{
+.contract-btn button:hover{
     background: #09b409;
 
 }
@@ -116,15 +137,21 @@ button:hover{
 }
 .labeline{
     position: absolute;
-    font-size: .9rem;
+    font-size: .8rem;
     color: #555555;
     padding: 0px 5px;
-    margin: 0 20px;
+    margin: 1px 15px;
     background-color: white;
     transition: .2s ease;
     display: flex;
     flex-direction: row;
     gap: 2px;
+    /* border: 2px solid green; */
+    z-index: 5555;
+    max-width: 140px;
+    width: 100%;
+    line-height: 30px;
+    opacity: 1;
 }
 .red{
     visibility: hidden;
@@ -140,9 +167,19 @@ button:hover{
     line-height: 30px;
     transform: translate(-15px, -16px) scale(0.78);
     z-index: 1111;
+    width: fit-content;
     .red{
         color: #C92127;
         visibility: visible;
         transition: .1s ease;
     }
+}
+
+.foot-para p{
+    max-width: 500px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 18px;
+    color: #555555;
 }

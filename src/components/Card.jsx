@@ -37,8 +37,11 @@ function Card(props) {
                 <div className="discount">
                     <p>Discount :</p>
                     <p className='discount-parcent'>{props.discount}%</p>
-                </div>
+                </div >
+                <div className="btn">
                 <button><i class="fa-solid fa-basket-shopping"></i>Add</button>
+                </div>
+
             </div>
 
         </div>
