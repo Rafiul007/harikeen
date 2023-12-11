@@ -7,6 +7,7 @@ import Home from './page/Home';
 import Product from './screens/Product';
 import { BrowserRouter } from 'react-router-dom';
 import Contract from './page/Contract';
+import Api from './page/Api';
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/contract' element={<Contract/>} />
+        <Route path='/api' element={<Api/>} />
       </Routes>
       </BrowserRouter>
     </div>
