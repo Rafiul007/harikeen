@@ -3,7 +3,9 @@ import './Model.css'
 import { Button, TextField, Typography } from '@mui/material'
 const Modal = ({closeModal}) => {
   return (
-    <div className="modal-container" onClick={closeModal}>
+    <div className="modal-container" onClick={(e)=>{
+        if(e.target.className === "modal-container"){closeModal()}
+    }}>
         <div className="modal">
             <Typography variant='h5' px={{margin:5}}>Add User</Typography>
             <form className='modal-from'>
