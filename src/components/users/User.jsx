@@ -9,14 +9,19 @@ function User() {
 
     const fetchUsers = async () => {
         try {
-            const response = await axios.get('https://jsonplaceholder.typicode.com/users');
-            setfetchData(response.data)
+            const response = await axios.get('https://reqres.in/api/users?page=2');
+            setfetchData(response.data.data)
         } catch (error) {
             console.error('Error fetching users:', error);
         }
     };
     const handleDelete = (id)=>{
-        console.log(id)
+        const index = fetchData.findIndex((item)=>item.id === id);
+        if(index !== -1){
+            fetchData.splice(index,1);
+            setfetchData([...fetchData]);
+        }
+        console.log(index)
     }
 
     return (
@@ -46,25 +51,23 @@ function User() {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Name</TableCell>
-                            <TableCell>Username</TableCell>
+                            <TableCell>First Name</TableCell>
+                            <TableCell>Last Name</TableCell>
                             <TableCell>Email</TableCell>
-                            <TableCell>Phone</TableCell>
                             <TableCell>Action</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {
                             fetchData.map((row) => {
-                                const { id, name, username, email, phone } = row;
+                                const { id, first_name, last_name, email } = row;
                                 return (
                                     <TableRow key={id}>
-                                        <TableCell>{name}</TableCell>
-                                        <TableCell>{username}</TableCell>
+                                        <TableCell>{first_name}</TableCell>
+                                        <TableCell>{last_name}</TableCell>
                                         <TableCell>{email}</TableCell>
-                                        <TableCell>{phone}</TableCell>
                                         <TableCell className='btn-cell'>
-                                            <Button variant='contained' color='error' sx={{ margin: 1 }} onClick={(id)=>handleDelete(id)} ><DeleteIcon fontSize='small' /></Button>
+                                            <Button variant='contained' color='error' sx={{ margin: 1 }} onClick={()=>handleDelete(id)} ><DeleteIcon fontSize='small' /></Button>
                                             <Button variant='contained' color='primary' sx={{ margin: 1}}><VisibilityIcon fontSize='small'/></Button>
                                         </TableCell>
                                     </TableRow>
