@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './User.css'
 import axios from 'axios';
 import { Button, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
@@ -15,10 +15,20 @@ function User() {
             console.error('Error fetching users:', error);
         }
     };
-    const handleDelete = (id)=>{
-        const index = fetchData.findIndex((item)=>item.id === id);
-        if(index !== -1){
-            fetchData.splice(index,1);
+
+    useEffect(() => {
+        fetchUsers();
+    },[])
+
+
+
+
+
+
+    const handleDelete = (id) => {
+        const index = fetchData.findIndex((item) => item.id === id);
+        if (index !== -1) {
+            fetchData.splice(index, 1);
             setfetchData([...fetchData]);
         }
         console.log(index)
@@ -43,8 +53,8 @@ function User() {
 
             </div> */}
             {/* <div className="api-btn"> */}
-                <Button variant='contained' color='success' sx={{margin:2,padding:1}} onClick={() => fetchUsers()}>Click Me!</Button>
-                {/* <button onClick={() => fetchUsers()}>Click me!</button> */}
+            {/* <Button variant='contained' color='success' sx={{ margin: 2, padding: 1 }} onClick={() => fetchUsers()}>Click Me!</Button> */}
+            {/* <button onClick={() => fetchUsers()}>Click me!</button> */}
             {/* </div> */}
 
             <TableContainer>
@@ -67,8 +77,8 @@ function User() {
                                         <TableCell>{last_name}</TableCell>
                                         <TableCell>{email}</TableCell>
                                         <TableCell className='btn-cell'>
-                                            <Button variant='contained' color='error' sx={{ margin: 1 }} onClick={()=>handleDelete(id)} ><DeleteIcon fontSize='small' /></Button>
-                                            <Button variant='contained' color='primary' sx={{ margin: 1}}><VisibilityIcon fontSize='small'/></Button>
+                                            <Button variant='contained' color='error' sx={{ margin: 1 }} onClick={() => handleDelete(id)} ><DeleteIcon fontSize='small' /></Button>
+                                            <Button variant='contained' color='primary' sx={{ margin: 1 }}><VisibilityIcon fontSize='small' /></Button>
                                         </TableCell>
                                     </TableRow>
                                 )

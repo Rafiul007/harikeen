@@ -19,8 +19,7 @@ const Modal = ({ closeModal }) => {
     }),
     onSubmit: (values) => {
       console.log("on submit clicked:", values);
-      axios.post('https://reqres.in/api/users', values).then(res => console.log(res)).catch(err => console.log(err))
-
+      axios.post('https://reqres.in/api/users', values).then(res => console.log(res)).catch(err => console.log(err));
     }
   })
 
