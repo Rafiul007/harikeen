@@ -25,3 +25,12 @@
     flex-direction: column;
     gap: 20px;
 }
+button{
+    background-color: lightcoral;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-weight: 700;
+    color: whitesmoke;
+}
